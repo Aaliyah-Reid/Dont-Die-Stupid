@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://bepu3k4t5epi8"]
+
+[ext_resource type="Texture2D" uid="uid://c8y1ufqsda8vm" path="res://Animation frames/rope_animation/preview-46.png" id="1_i0l4b"]
+[ext_resource type="Texture2D" uid="uid://bq5nnrvloi5sk" path="res://Animation frames/rope_animation/preview-48.png" id="2_5nkxh"]
+[ext_resource type="Texture2D" uid="uid://vg3lqeipy0kl" path="res://Animation frames/rope_animation/preview-49.png" id="3_34qj3"]
+[ext_resource type="Texture2D" uid="uid://dcg1373hsxvof" path="res://Animation frames/rope_animation/preview-51.png" id="4_qps61"]
+[ext_resource type="Texture2D" uid="uid://dsgix8hkbmdbu" path="res://Animation frames/rope_animation/preview-52.png" id="5_eylpl"]
+[ext_resource type="Texture2D" uid="uid://c1vohy4uxbch1" path="res://Animation frames/rope_animation/preview-54.png" id="6_43rs3"]
+
+[sub_resource type="Animation" id="Animation_axnft"]
+resource_name = "rope_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Preview-46:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.5, 0.8, 1.2, 1.5, 2, 3, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_i0l4b"), ExtResource("2_5nkxh"), ExtResource("3_34qj3"), ExtResource("4_qps61"), ExtResource("3_34qj3"), ExtResource("5_eylpl"), ExtResource("6_43rs3"), ExtResource("6_43rs3")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_814m6"]
+_data = {
+"rope_animation": SubResource("Animation_axnft")
+}
+
+[node name="rope_animation" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_814m6")
+}
+
+[node name="Preview-46" type="Sprite2D" parent="."]
+position = Vector2(482, 153)
+texture = ExtResource("6_43rs3")
