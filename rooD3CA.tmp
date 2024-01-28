@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cqvycqnldv150"]
+[gd_scene load_steps=23 format=3 uid="uid://cqvycqnldv150"]
 
 [ext_resource type="Texture2D" path="res://GameJam shading1 (1).png" id="2_5n48s"]
 [ext_resource type="Texture2D" path="res://Game jam bed.png" id="2_hsova"]
@@ -49,6 +49,8 @@ b = Vector2(671.127, 904.645)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spwy8"]
 size = Vector2(914.973, 253.083)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqe77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubq2m"]
 size = Vector2(205.976, 301.011)
@@ -154,35 +156,38 @@ position = Vector2(2035, 58)
 rotation = 0.115192
 shape = SubResource("SegmentShape2D_unv8k")
 
-[node name="item1 saw" type="Node" parent="."]
+[node name="items" type="Node" parent="."]
 
-[node name="Area2D" type="Area2D" parent="item1 saw"]
+[node name="Area2D" type="Area2D" parent="items"]
 script = ExtResource("7_scnm3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="item1 saw/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="items/Area2D"]
 position = Vector2(-1929, -11)
 rotation = -0.359538
 shape = SubResource("RectangleShape2D_spwy8")
 
-[node name="saw" type="Sprite2D" parent="item1 saw/Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="items/Area2D"]
+position = Vector2(-160.757, -1178.49)
+rotation = -0.359538
+shape = SubResource("RectangleShape2D_spwy8")
+
+[node name="saw" type="Sprite2D" parent="items/Area2D"]
 position = Vector2(-1917, -20)
 texture = ExtResource("6_iuoch")
 
-[node name="item2 key" type="Node2D" parent="."]
+[node name="item2" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="item2 key"]
+[node name="Area2D" type="Area2D" parent="item2"]
 script = ExtResource("7_cuug8")
 
-[node name="key" type="Sprite2D" parent="item2 key/Area2D"]
+[node name="key" type="Sprite2D" parent="item2/Area2D"]
 z_index = 226
 position = Vector2(-88, -1198)
 scale = Vector2(2.90982, 2.22122)
 texture = ExtResource("4_ypsr7")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="item2 key/Area2D"]
-position = Vector2(-160.757, -1178.49)
-rotation = -0.359538
-shape = SubResource("RectangleShape2D_spwy8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="item2/Area2D"]
+shape = SubResource("RectangleShape2D_jqe77")
 
 [node name="item 3 soap" type="Node2D" parent="."]
 
@@ -202,6 +207,4 @@ rotation = 1.1973
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ubq2m")
 
-[connection signal="input_event" from="item1 saw/Area2D" to="item1 saw/Area2D" method="_on_input_event"]
-[connection signal="input_event" from="item2 key/Area2D" to="item2 key/Area2D" method="_on_input_event"]
 [connection signal="input_event" from="item 3 soap/Area2D" to="item 3 soap/Area2D" method="_on_input_event"]

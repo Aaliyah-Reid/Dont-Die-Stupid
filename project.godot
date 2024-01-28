@@ -11,13 +11,10 @@ config_version=5
 [application]
 
 config/name="Dont Die Stupid"
-<<<<<<< HEAD
-run/main_scene="res://room_scene.tscn"
-=======
 run/main_scene="res://main.tscn"
->>>>>>> menu_scene
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="res://room_scene.tscn"
 
 [rendering]
 

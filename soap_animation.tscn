@@ -49,4 +49,4 @@ root_node = NodePath("../../..")
 
 [node name="GameJamSpongeAnim4" type="Sprite2D" parent="."]
 position = Vector2(1355, -781)
-texture = ExtResource("1_8lj1f")
+texture = ExtResource("3_t5cuf")

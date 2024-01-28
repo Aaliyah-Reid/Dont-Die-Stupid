@@ -1,7 +1,12 @@
 extends Sprite2D
 
-func _input(event):
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_rect().has_point(to_local(event.position)):
-			print(name)
+#func _input_event(viewport, event, shape_idx):
+	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		#print("You clicked on the Sprite!")
 
+
+
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print("You clicked on the Sprite! soapppp" )
+	
