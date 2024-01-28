@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://camr3t6mux23d"]
+[gd_scene load_steps=15 format=3 uid="uid://camr3t6mux23d"]
 
 [ext_resource type="Texture2D" uid="uid://cu6f1q2g7duc" path="res://GameJam shading1 (1).png" id="2_5n48s"]
 [ext_resource type="Texture2D" uid="uid://b137egtmv2fj7" path="res://Game jam bed.png" id="2_hsova"]
 [ext_resource type="PackedScene" uid="uid://ci46m0c30ws2n" path="res://player.tscn" id="3_txawv"]
 [ext_resource type="Texture2D" uid="uid://cddvngu36wo5r" path="res://Game jam key.png" id="4_ypsr7"]
 [ext_resource type="Script" path="res://sound.gd" id="5_6awd0"]
-[ext_resource type="Texture2D" uid="uid://c4b224unimr7s" path="res://Game jam saw.png" id="6_iuoch"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_t7q4b"]
 a = Vector2(-2737, -1200)
@@ -56,7 +55,6 @@ show_behind_parent = true
 position = Vector2(-0.999969, 6.10352e-05)
 scale = Vector2(1, 1)
 texture = ExtResource("2_5n48s")
-script = ExtResource("5_6awd0")
 
 [node name="Player" parent="Environment" instance=ExtResource("3_txawv")]
 top_level = true
@@ -148,13 +146,7 @@ shape = SubResource("SegmentShape2D_unv8k")
 
 [node name="items" type="Node" parent="."]
 
-[node name="key" type="Sprite2D" parent="items"]
-position = Vector2(-144, -1216)
-scale = Vector2(1.755, 1.755)
+[node name="Sprite2D" type="Sprite2D" parent="items"]
+position = Vector2(-46, -1229)
 texture = ExtResource("4_ypsr7")
-script = ExtResource("5_6awd0")
-
-[node name="saw" type="Sprite2D" parent="items"]
-position = Vector2(-1917, -20)
-texture = ExtResource("6_iuoch")
 script = ExtResource("5_6awd0")

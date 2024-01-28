@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 
 
-var speed = 500
+var speed = 600
 var scale_speed = 0.009
 
 
