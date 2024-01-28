@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://byi7mdlim3bjl" path="res://Animation frames/soap_animation/Game jam spongeAnim4.png" id="2_hf4we"]
 [ext_resource type="Texture2D" uid="uid://cjxxga1h2d0fc" path="res://Animation frames/soap_animation/Game jam spongeAnim2.png" id="3_t5cuf"]
 
-[sub_resource type="Animation" id="Animation_dvrhc"]
-resource_name = "Soap "
-
 [sub_resource type="Animation" id="Animation_qgw6e"]
 resource_name = "Soap"
 loop_mode = 1
@@ -22,6 +19,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("1_8lj1f"), ExtResource("1_8lj1f"), ExtResource("2_hf4we"), ExtResource("3_t5cuf")]
 }
+
+[sub_resource type="Animation" id="Animation_dvrhc"]
+resource_name = "Soap "
 
 [sub_resource type="Animation" id="Animation_n5rth"]
 resource_name = "new_animation"

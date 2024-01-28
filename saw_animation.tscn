@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://d8k85udqeeel" path="res://Animation frames/saw_animation/Game jam saw.png" id="1_okqvc"]
 
+[sub_resource type="Animation" id="Animation_84pmg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../GameJamSaw:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_okqvc")]
+}
+
 [sub_resource type="Animation" id="Animation_25lli"]
 resource_name = "saw_animation"
 loop_mode = 1
@@ -28,21 +43,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(),
 "update": 1,
 "values": []
-}
-
-[sub_resource type="Animation" id="Animation_84pmg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../../GameJamSaw:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_okqvc")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qog1w"]
