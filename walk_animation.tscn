@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4fjssvoeinhp"]
+
+[ext_resource type="Texture2D" uid="uid://cdawyaa1ujo07" path="res://Animation frames/walkk 1.png" id="1_kdkrr"]
+[ext_resource type="Texture2D" uid="uid://by0saxk0rsotb" path="res://Animation frames/saw_animation/walk_animation/walkk 4.png" id="2_xv7u3"]
+
+[sub_resource type="Animation" id="Animation_0pltd"]
+resource_name = "walk_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Walkk1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_kdkrr"), ExtResource("2_xv7u3"), ExtResource("1_kdkrr"), ExtResource("2_xv7u3")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ysmj2"]
+_data = {
+"walk_animation": SubResource("Animation_0pltd")
+}
+
+[node name="walk_animation" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ysmj2")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="Walkk1" type="Sprite2D" parent="."]
+position = Vector2(463, 106)
+texture = ExtResource("2_xv7u3")
