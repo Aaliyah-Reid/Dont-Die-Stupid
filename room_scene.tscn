@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://camr3t6mux23d"]
+
+[ext_resource type="Texture2D" uid="uid://cu6f1q2g7duc" path="res://GameJam shading1 (1).png" id="2_5n48s"]
+[ext_resource type="Texture2D" uid="uid://b137egtmv2fj7" path="res://Game jam bed.png" id="2_hsova"]
+[ext_resource type="PackedScene" uid="uid://ci46m0c30ws2n" path="res://player.tscn" id="3_txawv"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ops04"]
+a = Vector2(-2136.98, -59.9362)
+b = Vector2(671.127, 904.645)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2qvon"]
+a = Vector2(-2737, -1200)
+
+[node name="roomScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 0)
+zoom = Vector2(0.145, 0.145)
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Environment"]
+show_behind_parent = true
+position = Vector2(-0.999969, 6.10352e-05)
+scale = Vector2(1, 1)
+texture = ExtResource("2_5n48s")
+
+[node name="Player" parent="Environment" instance=ExtResource("3_txawv")]
+top_level = true
+light_mask = 2
+position = Vector2(231, 655)
+scale = Vector2(0.34, 0.34)
+
+[node name="GameJamBed" type="Sprite2D" parent="Environment"]
+position = Vector2(-1348, 781)
+texture = ExtResource("2_hsova")
+
+[node name="line4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line4"]
+position = Vector2(1233, 324)
+rotation = 0.115192
+shape = SubResource("SegmentShape2D_ops04")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2605, 1018)
+shape = SubResource("SegmentShape2D_2qvon")
+
+[node name="line" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line"]
+top_level = true
+light_mask = 2
+position = Vector2(-430, 1232)
+rotation = 0.0628319
+shape = SubResource("SegmentShape2D_ops04")
+
+[node name="line2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line2"]
+position = Vector2(1241, 2398)
+rotation = -3.88685
+shape = SubResource("SegmentShape2D_ops04")
+
+[node name="line3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line3"]
+light_mask = 2
+position = Vector2(-1239, 1169)
+rotation = -3.90605
+shape = SubResource("SegmentShape2D_ops04")
+
+[node name="line5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="line5"]
+position = Vector2(996, -1133)
+rotation = -0.794125
+shape = SubResource("SegmentShape2D_ops04")
